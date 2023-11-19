@@ -1,0 +1,1238 @@
+/* Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*Custom css colors*/
+
+:root {
+    --agrey: #a1a1a6;
+    --alightgrey: #f5f5f7;
+    --mylilac: #bd83b8;
+    --myorange: #f1916d;
+    --ablue: #2997ff;
+    --mydarkblue: #06142E;
+
+    --mymediumblue: #1b3358;
+    --mypurple: #473E66; 
+    --mylight: #f5d7db;
+    --ablack: #161617;
+    --adarkgrey: #1d1d1f;
+    
+}
+
+/* <body> styles */
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    min-height: 740px;
+
+    background: var(--ablack);
+    
+    /*
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    */
+    
+}
+
+/* Text styles */
+
+b, strong { font-weight: bold }
+i, em { font-style: italic }
+
+/* Links */
+a {
+    color: var(--ablue);
+    text-decoration: none;
+    padding: 0 0.1em;
+    
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/*
+    Fallback message for users with browsers that don't support
+    all the features required by it
+*/
+
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border: 1px solid var(--adarkgrey);
+    border-radius: 10px;
+    background: var(--adarkgrey);
+    color: var(--agrey)
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-supported .fallback-message {
+    display: none;
+}
+
+/*
+    Display steps correctly
+*/
+
+.step {
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+/*
+   Remove the margin and make inactive steps a little bit transparent.
+*/
+
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.3;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+
+/* h1, h2, h3.. */
+
+h1 {
+    font-weight: 700;
+    font-size: 95px;
+    line-height: 110px;
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--alightrey);
+}
+
+h2, h3, h4, h5,  h6 {
+    font-family: 'Lora', serif;
+    margin-bottom: 20px;
+    color: var(--alightgrey);
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 60px;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 55px;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 50px;
+}
+
+h5 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+}
+
+h6 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+}
+
+p{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--alightgrey);
+}
+
+p.company {
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Color classes */
+
+.lilac {
+    color: var(--mylilac);
+}
+
+/* Welcome */
+
+#welcome {
+    color: var(--alightgrey);
+    text-align: center;
+    font-family: 'Lora', serif;
+}
+
+.hero-img {
+    max-width: 450px;
+    display: block;
+    margin: 30px auto;
+}
+
+#welcome .signature {
+    font-family: 'Caveat', cursive;
+    text-align: right;
+    font-size: 40px;
+}
+
+/* welcome h1 animation */
+
+.welcome-word {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .welcome-word-1 {
+    --color-1: #a1a1a6;;
+    --color-2: #f5f5f7;
+    --color-3: #bd83b8;
+  }
+  
+  .welcome-word-2 {
+    --color-3: #a1a1a6;;
+    --color-1: #f5f5f7;
+    --color-2: #bd83b8;
+  }
+
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+
+/* About */
+
+#about img {
+    max-width: 120px;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+#about .flex-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#about .flex-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#about h2 {
+    text-align: center;
+    color: var(--myorange);
+}
+
+#about b {
+    display: inline-block;
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+#about.present .scaling {
+    -webkit-transform: scale(1.2);
+    -moz-transform:    scale(1.2);
+    -ms-transform:     scale(1.2);
+    -o-transform:      scale(1.2);
+    transform:         scale(1.2);
+
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay:    0.5s;
+    -ms-transition-delay:     0.5s;
+    -o-transition-delay:      0.5s;
+    transition-delay:         0.5s;
+}
+
+
+/* Slides */
+
+.slide {
+    display: block;
+
+    width: 900px;
+    height: 700px;
+    padding: 40px 60px;
+
+    background-color: var(--adarkgrey);
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+
+    color: var(--agrey);
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -1px;
+}
+
+.slide q {
+    display: block;
+    font-size: 50px;
+    line-height: 72px;
+
+    margin-top: 100px;
+}
+
+.slide q strong {
+    white-space: nowrap;
+}
+
+/* Step - results */
+
+#results {
+    padding: 0;
+}
+
+#results h2.up {
+    -webkit-transform: translateZ(20px);
+    -moz-transform:    translateZ(20px);
+    -ms-transform:     translateZ(20px);
+    -o-transform:      translateZ(20px);
+    transform:         translateZ(20px);
+}
+
+#results h2 {
+    font-size: 75px;
+    line-height: 90px;
+    -webkit-transform: translateZ(50px);
+    -moz-transform:    translateZ(50px);
+    -ms-transform:     translateZ(50px);
+    -o-transform:      translateZ(50px);
+    transform:         translateZ(50px);
+}
+
+#results .extra {
+    color: var(--ablue);
+}
+
+#results .deliver {
+    color: var(--mylilac);
+}
+
+#results .flex {
+    display: flex; 
+    align-items: center;
+}
+
+#results img {
+    max-width: 200px;
+    display: inline-block;
+    margin-left: auto;
+    margin-top: auto;
+}
+
+/* CV */
+
+#cv .flexImg {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#cv img {
+    display: block;
+    max-width: 200px;
+}
+
+#cv .footnote {
+    font-size: 25px;
+    text-align: right;
+}
+
+#cv .web {
+    text-transform: uppercase;
+    color: var(--myorange);
+    font-weight: 700;
+}
+
+#cv .marketing {
+    text-transform: uppercase;
+    color :var(--mylilac);
+    font-weight: 700;
+}
+
+#cv .project {
+    text-transform: uppercase;
+    color: var(--ablue);
+    font-weight: 700;
+}
+
+/* Portfolio 1 */
+#portfolio h2,
+#portfolio p {
+    text-align: center;
+}
+
+#portfolio p.website-link,
+#portfolio p.company {
+    text-align: left;
+}
+
+/* Portfolio 2,3,4 */
+#portfolio2 h3,
+#portfolio3 h3,
+#portfolio4 h3,
+#portfolio5 h3,
+#portfolio6 h3,
+#portfolio7 h3,
+#portfolio8 h3
+ {
+    text-align: center;
+}
+
+/* Portfolio gallery */
+
+.gallery1 {
+    width: 900px;
+    margin: 0 auto;
+    padding: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+.gallery1 > div {
+    position: relative;
+    float: left;
+    padding: 5px;
+}
+.gallery1 > div > img {
+    max-width: 420px;
+    transition: 0.1s transform;
+    transform: translateZ(0);
+    border-radius: 10px;
+}
+.gallery1 > div:hover {
+    z-index: 1;
+}
+.gallery1 > div:hover > img {
+    transform: scale(2.5, 2.5);
+    transition: 0.3s transform;
+}
+.cf:before, .cf:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+.cf:after {
+    clear: both;
+}
+
+/* Step - big ideas */
+
+#big {
+    width: 600px;
+    text-align: center;
+    font-size: 60px;
+    line-height: 1;
+}
+
+#big strong,
+#big b {
+    display: block;
+    font-size: 250px;
+    line-height: 250px;
+    color: var(--ablue);
+}
+
+#big .ideas {
+    font-size: 90px;
+    line-height: 150px;
+}
+
+/* Step - Tiny ideas */
+
+#tiny {
+    width: 500px;
+    text-align: center;
+}
+
+#tiny b {
+    color: var(--myorange);
+}
+
+#tiny img {
+    display: block;
+    max-width: 250px;
+    margin: 30px auto;
+}
+
+/* Step - ing */
+
+#ing { width: 800px }
+
+/* display to `inline-block` to enable transforms and transition duration to 0.5s */
+
+#ing p {
+    margin-left: 250px;
+    font-size: 50px;
+    line-height: 100px;
+}
+
+#ing .positioning {
+    color: var(--mylilac);
+}
+
+#ing .rotating {
+    color: var(--myorange);
+}
+
+#ing .scaling {
+    color: var(--ablue);
+}
+
+#ing b {
+    display: inline-block;
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+/* 'positioning` word to move up a bit when the step gets `present` class */
+
+#ing.present .positioning {
+    -webkit-transform: translateY(-10px);
+    -moz-transform:    translateY(-10px);
+    -ms-transform:     translateY(-10px);
+    -o-transform:      translateY(-10px);
+    transform:         translateY(-10px);
+}
+
+/* 'rotating' to rotate a quarter of a second later */
+
+#ing.present .rotating {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform:    rotate(-10deg);
+    -ms-transform:     rotate(-10deg);
+    -o-transform:      rotate(-10deg);
+    transform:         rotate(-10deg);
+
+    -webkit-transition-delay: 0.25s;
+    -moz-transition-delay:    0.25s;
+    -ms-transition-delay:     0.25s;
+    -o-transition-delay:      0.25s;
+    transition-delay:         0.25s;
+}
+
+/* and 'scaling' to scale down after another quarter of a second. */
+
+#ing.present .scaling {
+    -webkit-transform: scale(1.2);
+    -moz-transform:    scale(1.2);
+    -ms-transform:     scale(1.2);
+    -o-transform:      scale(1.2);
+    transform:         scale(1.2);
+
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay:    0.5s;
+    -ms-transition-delay:     0.5s;
+    -o-transition-delay:      0.5s;
+    transition-delay:         0.5s;
+}
+
+/* Step - limits */
+
+#limits p {
+    font-size: 45px;
+    line-height: 60px;
+}
+
+#limits {
+    width: 800px;
+    margin-left: 550px;
+    margin-top: -500px;
+}
+
+#limits .limits {
+    font-size: 78px;
+    color: var(--mylilac);
+}
+
+#limits img {
+    display: block;
+    max-width: 250px;
+}
+
+/* Step - contact */
+
+#contact {
+    width: 700px;
+    padding-bottom: 300px;
+}
+
+#contact h2 {
+    text-align: center;
+}
+
+#contact a {
+    display: block;
+}
+
+#contact a img {
+    max-width: 200px;
+}
+
+#contact .flex-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Thank you */
+
+#thank p {
+    color: var(--myorange);
+}
+
+#thank p,
+#thank h2 {
+    text-align: center;
+}
+
+#thank img {
+    display: block;
+    max-width: 200px;
+    margin: 30px auto;
+}
+
+/* Step - it's in 3D */
+
+#its-in-3d p {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style:    preserve-3d;
+    -ms-transform-style:     preserve-3d;
+    -o-transform-style:      preserve-3d;
+    transform-style:         preserve-3d;
+}
+
+#its-in-3d span,
+#its-in-3d b {
+    display: inline-block;
+    -webkit-transform: translateZ(40px);
+    -moz-transform:    translateZ(40px);
+    -ms-transform:     translateZ(40px);
+    -o-transform:      translateZ(40px);
+     transform:        translateZ(40px);
+
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+#its-in-3d .let {
+    -webkit-transform: translateZ(-40px);
+    -moz-transform:    translateZ(-40px);
+    -ms-transform:     translateZ(-40px);
+    -o-transform:      translateZ(-40px);
+    transform:         translateZ(-40px);
+}
+
+#its-in-3d .me {
+    -webkit-transform: translateZ(20px);
+    -moz-transform:    translateZ(20px);
+    -ms-transform:     translateZ(20px);
+    -o-transform:      translateZ(20px);
+    transform:         translateZ(20px);
+}
+
+#its-in-3d .know {
+    -webkit-transform: translateZ(-40px);
+    -moz-transform:    translateZ(-40px);
+    -ms-transform:     translateZ(-40px);
+    -o-transform:      translateZ(-40px);
+    transform:         translateZ(-40px);
+}
+
+#its-in-3d .how {
+    -webkit-transform: translateZ(60px);
+    -moz-transform:    translateZ(60px);
+    -ms-transform:     translateZ(60px);
+    -o-transform:      translateZ(60px);
+    transform:         translateZ(60px);
+}
+
+#its-in-3d .you {
+    -webkit-transform: translateZ(-10px);
+    -moz-transform:    translateZ(-10px);
+    -ms-transform:     translateZ(-10px);
+    -o-transform:      translateZ(-10px);
+    transform:         translateZ(-10px);
+}
+
+#its-in-3d.present span,
+#its-in-3d.present b {
+    -webkit-transform: translateZ(0px);
+    -moz-transform:    translateZ(0px);
+    -ms-transform:     translateZ(0px);
+    -o-transform:      translateZ(0px);
+    transform:         translateZ(0px);
+}
+
+/* Step - overview (not visible) */
+
+#overview { display: none }
+
+/* Other steps visible */
+
+.impress-on-overview .step {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/*  Hint */
+
+.hint {
+    /*
+        Hide the hint until presentation is started and from browsers not supporting
+        impress.js, as they will have a linear scrollable view 
+    */
+
+    display: none;
+
+    /*
+        Fixed position and styles
+    */
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+
+    background: rgba(0,0,0,0.5);
+    color: var(--agrey);
+    text-align: center;
+    border-radius: 10px;
+
+    font-size: 20px;
+    padding: 20px;
+
+    z-index: 100;
+
+    /*
+        Transparent by default
+    */
+    opacity: 0;
+
+    /*
+        And below the bottom of the screen (relative to it's fixed position)
+    */
+    -webkit-transform: translateY(400px);
+    -moz-transform:    translateY(400px);
+    -ms-transform:     translateY(400px);
+    -o-transform:      translateY(400px);
+    transform:         translateY(400px);
+
+    /*
+        Fade it out and move out
+        of the screen.
+    */
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+    -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
+    -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
+    -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
+    transition:         opacity 1s,         transform 0.5s 1s;
+}
+
+.hint p {
+    font-size: 15px;
+    line-height: 30px;
+}
+
+/*
+    'enable' the hint when presentation is initialized.
+*/
+.impress-enabled .hint { display: block }
+
+/*
+    Show it when the first step (with id 'welcome') is active.
+*/
+.impress-on-welcome .hint {
+    /*
+        Remove the transparency and position the hint in its default fixed
+        position.
+    */
+    opacity: 1;
+
+    -webkit-transform: translateY(0px);
+    -moz-transform:    translateY(0px);
+    -ms-transform:     translateY(0px);
+    -o-transform:      translateY(0px);
+    transform:         translateY(0px);
+
+    /*
+        Fade in transition
+    */
+    -webkit-transition: opacity 1s 5s, -webkit-transform 0.5s 4.5s;
+    -moz-transition:    opacity 1s 5s,    -moz-transform 0.5s 4.5s;
+    -ms-transition:     opacity 1s 5s,     -ms-transform 0.5s 4.5s;
+    -o-transition:      opacity 1s 5s,      -o-transform 0.5s 4.5s;
+    transition:         opacity 1s 5s,         transform 0.5s 4.5s;
+}
+
+/* Responsive */
+
+@media screen and (max-width:1199px) {
+    h1 {
+        font-size: 165px;
+        line-height: 180px;
+        margin-bottom: 30px;
+    }
+    h2 {
+        font-size: 95px;
+        line-height: 110px;
+        margin-bottom: 30px;
+    }
+    h3 {
+        font-size: 75px;
+        line-height: 90px;
+        margin-bottom: 30px;    
+    }
+    p {
+        font-size: 60px;
+        line-height: 75px;
+        margin-left: -50px;
+    } 
+    .hint p {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width:599px) {
+    h1 {
+        font-size: 265px;
+        line-height: 280px;
+        margin-bottom: 30px;
+    }
+    h2 {
+        font-size: 100px;
+        line-height: 115px;
+        margin-bottom: 30px;
+    }
+    /* h3 {
+        font-size: 75px;
+        line-height: 90px;
+        margin-bottom: 30px;    
+    } */
+    p {
+        font-size: 100px;
+        line-height: 115px;
+    } 
+}
+
+/* Welcome */
+
+@media screen and (max-width:1199px){
+
+    #welcome {
+        width:1500px;
+    }
+
+    #welcome img {
+        max-width: 800px;
+    }
+    
+    #welcome p.signature {
+        font-size: 60px;
+        line-height: 75px;
+    }
+
+}
+
+@media screen and (max-width:599px){
+
+    #welcome.step {
+        width: 1500px;       
+    }
+
+    #welcome img {
+        max-width: 1300px;
+    }
+    
+    #welcome p.signature {
+        font-size: 100px;
+        line-height: 115px;
+    }
+
+}
+
+/* About */
+
+@media screen and (max-width:1199px){
+    
+    #about.slide {
+        width: 1700px !important;
+        height: 1300px !important;
+    }
+
+    #about h2 {
+        margin-bottom: 50px;
+    }
+
+    #about b.scaling {
+        font-size: 50px;
+        line-height: 65px;
+    }
+
+    #about img {
+        max-width: 220px;
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width:599px){
+    
+    #about.slide {
+        width: 1900px !important;
+        height: 1400px !important;
+    }
+
+    #about h2 {
+        margin-bottom: 60px;
+    }
+
+    #about b.scaling {
+        font-size: 70px;
+        line-height: 85px;
+    }
+
+    #about img {
+        margin-left: 70px;
+    }
+}
+
+/* Results */
+
+@media screen and (max-width:1199px){
+    #results {
+        margin-top: 400px;
+    }
+}
+
+@media screen and (max-width:599px){
+    #results {
+        width: 1300px;
+        margin-top: 1100px;
+        margin-left: -800px;
+    }
+
+    #results img {
+        max-width: 350px;
+    }
+
+    #results h2 {
+        font-size: 100px;
+        line-height: 115px;
+    }
+}
+
+/* CV */
+
+@media screen and (max-width:1199px){
+    #cv {
+        width: 1200px;
+    }
+    #cv p:first-child {
+        margin-top: 300px;
+    }
+    #cv p,
+    #cv img {
+        margin-left: 50px;
+    }
+    #cv p.footnote {
+        font-size: 40px;
+        line-height: 55px;
+    }
+
+}
+
+@media screen and (max-width:599px){
+    #cv {
+        width: 2000px;
+    }
+    #cv p:first-child {
+        margin-top: 850px;
+    }
+    #cv p,
+    #cv img {
+        margin-left: 600px;
+    }
+    #cv img.marketingImg {
+        max-width: 350px;
+    }
+    #cv p {
+        font-size: 75px;
+        line-height: 90px;
+    }
+    #cv p.footnote {
+        font-size: 65px;
+        line-height: 80px;
+        margin-left: 30px;
+        text-align: left;
+    }
+
+}
+
+/* portfolio */
+
+@media screen and (max-width:1199px){
+   
+    #portfolio2 p,
+    #portfolio3 p,
+    #portfolio4 p,
+    #portfolio5 p,
+    #portfolio6 p,
+    #portfolio7 p,
+    #portfolio8 p {
+
+       text-align: center;
+    }
+}
+
+
+@media screen and (max-width:599px){
+    #portfolio {
+        width: 1300px;
+    }
+    #portfolio p {
+        margin-bottom: 30px;
+        font-size: 60px;
+        line-height: 75px;
+    }
+    #portfolio2 p,
+    #portfolio3 p,
+    #portfolio4 p,
+    #portfolio5 p,
+    #portfolio6 p,
+    #portfolio7 p,
+    #portfolio8 p {
+
+        font-size: 60px;
+        line-height: 75px;
+    }
+}
+
+/* big */
+
+@media screen and (max-width:599px){
+    #big {
+        margin-top: -100px;
+    }
+}
+
+/* tiny */
+
+#tiny p {
+    font-size: 50px;
+    line-height: 65px;
+}
+
+@media screen and (max-width:599px) {
+    #tiny {
+        width: 1100px;
+    }
+    #tiny img {
+        max-width: 450px;
+    }
+    #tiny p {
+        font-size: 90px;
+        line-height: 105px;
+    }
+}
+
+/* ing */
+
+@media screen and (max-width:1199px){
+    #ing {
+        width: 1100px;
+    }
+    #ing p {
+        margin-left: 400px;
+    }
+    #ing p,
+    #ing p b {
+        font-size: 60px;
+        line-height: 120px;
+    }
+}
+
+@media screen and (max-width:599px){
+    #ing {
+        width: 1800px;
+    }
+    #ing p {
+        margin-left: 800px;
+        margin-top: 200px;
+    }
+    #ing p,
+    #ing p b {
+        font-size: 90px;
+        line-height: 180px;
+    }
+}
+
+/* limits */
+
+@media screen and (max-width:1199px){
+    #limits {
+        margin-left: 1500px;
+        margin-top: -1200px;
+    }
+
+    #limits p {
+        font-size: 60px;
+        line-height: 75px;
+    }
+}
+
+@media screen and (max-width:599px){
+    #limits {
+        width: 1000px;
+        margin-left: 2100px;
+        margin-top: -1800px;
+    }
+    #limits p {
+        font-size: 90px;
+        line-height: 105px;
+    }
+    #limits b.limits {
+        font-size: 110px;
+    }
+}
+
+/* contact */
+
+@media screen and (max-width:1199px){
+    #contact {
+        margin-left: 500px;
+    }
+
+    #contact h2 {
+        font-size: 60px;
+        line-height: 75px;
+    }
+}
+
+@media screen and (max-width:599px){
+    #contact {
+        margin-top: -700px;
+        margin-left: 300px;
+    }
+    #contact h2 {
+        font-size: 90px;
+        line-height: 105px;
+    }
+    #contact a img {
+        max-width:300px;
+    }
+}
+
+/* thank */
+
+@media screen and (max-width:599px){
+    #thank {
+        margin-top: 150px;
+    }
+    #thank img {
+        max-width: 300px;
+    }
+}
