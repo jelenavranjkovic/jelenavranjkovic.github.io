@@ -1053,7 +1053,8 @@ p.company {
     }
     #cv p,
     #cv img {
-        margin-left: 600px;
+        margin-left: 400px;
+        margin-right: 200px;
     }
     #cv img.marketingImg {
         max-width: 350px;
