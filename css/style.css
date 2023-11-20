@@ -890,11 +890,8 @@ p.company {
     p {
         font-size: 60px;
         line-height: 75px;
-        margin-left: -50px;
+        margin-bottom: 30px;
     } 
-    .hint p {
-        margin-left: 0;
-    }
 }
 
 @media screen and (max-width:599px) {
@@ -1076,6 +1073,8 @@ p.company {
 
 @media screen and (max-width:1199px){
    
+    #portfolio p.website-link,
+    #portfolio p.company,
     #portfolio2 p,
     #portfolio3 p,
     #portfolio4 p,
@@ -1085,6 +1084,11 @@ p.company {
     #portfolio8 p {
 
        text-align: center;
+    }
+
+    #portfolio p.company {
+        font-size: 50px;
+        line-height: 65px;
     }
 }
 
