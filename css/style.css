@@ -408,14 +408,13 @@ p.company {
 
 #results .flex {
     display: flex; 
+    flex-direction: column;
     align-items: center;
 }
 
 #results img {
     max-width: 200px;
     display: inline-block;
-    margin-left: auto;
-    margin-top: auto;
 }
 
 /* CV */
@@ -795,8 +794,8 @@ p.company {
         Fixed position and styles
     */
     position: fixed;
-    left: 30px;
-    bottom: 30px;
+    left: 15px;
+    bottom: 15px;
 
     background: rgba(0,0,0,0.5);
     color: var(--agrey);
@@ -891,6 +890,9 @@ p.company {
         font-size: 60px;
         line-height: 75px;
         margin-bottom: 30px;
+    }
+    .hint p {
+        margin-bottom: 0;
     } 
 }
 
@@ -925,7 +927,7 @@ p.company {
     }
 
     #welcome img {
-        max-width: 800px;
+        max-width: 500px;
     }
     
     #welcome p.signature {
@@ -957,8 +959,8 @@ p.company {
 @media screen and (max-width:1199px){
     
     #about.slide {
-        width: 1700px !important;
-        height: 1300px !important;
+        width: 1500px !important;
+        height: 1100px !important;
     }
 
     #about h2 {
@@ -1026,10 +1028,10 @@ p.company {
 
 @media screen and (max-width:1199px){
     #cv {
-        width: 1200px;
+        width: 1500px;
     }
     #cv p:first-child {
-        margin-top: 300px;
+        margin-top: 200px;
     }
     #cv p,
     #cv img {
